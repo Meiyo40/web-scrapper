@@ -1,0 +1,612 @@
+{
+    "config": {
+        "output_file": null,
+        "full_docs": false,
+        "pub_only": true,
+        "reachable_only": true,
+        "distro_crate": false,
+        "signatures": false,
+        "borrow_data": false
+    },
+    "version": "0.19.1",
+    "compilation": {
+        "directory": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0",
+        "program": "C:\\Users\\loicd\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\rls.exe",
+        "arguments": [
+            "--crate-name",
+            "build_script_build",
+            "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+            "--json=diagnostic-rendered-ansi",
+            "--crate-type",
+            "bin",
+            "--emit=dep-info,link",
+            "-C",
+            "embed-bitcode=no",
+            "-C",
+            "debuginfo=2",
+            "-C",
+            "metadata=7f442ce3b7de5c77",
+            "-C",
+            "extra-filename=-7f442ce3b7de5c77",
+            "--out-dir",
+            "e:\\Etudes\\DEVELOPPEMENT\\_LAB\\_RUST\\web-scrapper\\target\\rls\\debug\\build\\markup5ever-7f442ce3b7de5c77",
+            "-L",
+            "dependency=e:\\Etudes\\DEVELOPPEMENT\\_LAB\\_RUST\\web-scrapper\\target\\rls\\debug\\deps",
+            "--extern",
+            "phf_codegen=e:\\Etudes\\DEVELOPPEMENT\\_LAB\\_RUST\\web-scrapper\\target\\rls\\debug\\deps\\libphf_codegen-9c5dcd932e17d923.rlib",
+            "--extern",
+            "serde=e:\\Etudes\\DEVELOPPEMENT\\_LAB\\_RUST\\web-scrapper\\target\\rls\\debug\\deps\\libserde-cd797eb8e51e4594.rlib",
+            "--extern",
+            "serde_derive=e:\\Etudes\\DEVELOPPEMENT\\_LAB\\_RUST\\web-scrapper\\target\\rls\\debug\\deps\\serde_derive-5d1c9cbcc611afbb.dll",
+            "--extern",
+            "serde_json=e:\\Etudes\\DEVELOPPEMENT\\_LAB\\_RUST\\web-scrapper\\target\\rls\\debug\\deps\\libserde_json-e1d6910d8a147e2d.rlib",
+            "--extern",
+            "string_cache_codegen=e:\\Etudes\\DEVELOPPEMENT\\_LAB\\_RUST\\web-scrapper\\target\\rls\\debug\\deps\\libstring_cache_codegen-25d2cba0753875b4.rlib",
+            "--cap-lints",
+            "allow",
+            "--error-format=json",
+            "--sysroot",
+            "C:\\Users\\loicd\\.rustup/toolchains/stable-x86_64-pc-windows-msvc"
+        ],
+        "output": "e:\\Etudes\\DEVELOPPEMENT\\_LAB\\_RUST\\web-scrapper\\target\\rls\\debug\\build\\markup5ever-7f442ce3b7de5c77\\build_script_build-7f442ce3b7de5c77.exe"
+    },
+    "prelude": {
+        "crate_id": {
+            "name": "build_script_build",
+            "disambiguator": [
+                3336986090961652024,
+                0
+            ]
+        },
+        "crate_root": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0",
+        "external_crates": [
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 1,
+                "id": {
+                    "name": "std",
+                    "disambiguator": [
+                        10193565062885309191,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 2,
+                "id": {
+                    "name": "core",
+                    "disambiguator": [
+                        11670460313399248794,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 3,
+                "id": {
+                    "name": "compiler_builtins",
+                    "disambiguator": [
+                        8277854152057768692,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 4,
+                "id": {
+                    "name": "rustc_std_workspace_core",
+                    "disambiguator": [
+                        6312854529260013001,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 5,
+                "id": {
+                    "name": "alloc",
+                    "disambiguator": [
+                        11828252632451478976,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 6,
+                "id": {
+                    "name": "libc",
+                    "disambiguator": [
+                        12374244740244276079,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 7,
+                "id": {
+                    "name": "unwind",
+                    "disambiguator": [
+                        10571265039882681484,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 8,
+                "id": {
+                    "name": "cfg_if",
+                    "disambiguator": [
+                        417492704836984899,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 9,
+                "id": {
+                    "name": "hashbrown",
+                    "disambiguator": [
+                        7421411805122234607,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 10,
+                "id": {
+                    "name": "rustc_std_workspace_alloc",
+                    "disambiguator": [
+                        14357827127085763175,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 11,
+                "id": {
+                    "name": "rustc_demangle",
+                    "disambiguator": [
+                        7547149687459966599,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 12,
+                "id": {
+                    "name": "std_detect",
+                    "disambiguator": [
+                        3948222140130536591,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 13,
+                "id": {
+                    "name": "panic_unwind",
+                    "disambiguator": [
+                        11460324065167655691,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 14,
+                "id": {
+                    "name": "phf_codegen",
+                    "disambiguator": [
+                        1492382905750258472,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 15,
+                "id": {
+                    "name": "phf_shared",
+                    "disambiguator": [
+                        7357003603223809493,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 16,
+                "id": {
+                    "name": "siphasher",
+                    "disambiguator": [
+                        1862630829009437365,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 17,
+                "id": {
+                    "name": "phf_generator",
+                    "disambiguator": [
+                        474399184577211196,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 18,
+                "id": {
+                    "name": "rand",
+                    "disambiguator": [
+                        5636535070692438480,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 19,
+                "id": {
+                    "name": "rand_jitter",
+                    "disambiguator": [
+                        2099158892876023542,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 20,
+                "id": {
+                    "name": "rand_core",
+                    "disambiguator": [
+                        11492839559026413538,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 21,
+                "id": {
+                    "name": "winapi",
+                    "disambiguator": [
+                        16191792811229588269,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 22,
+                "id": {
+                    "name": "rand_os",
+                    "disambiguator": [
+                        2846084275736893395,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 23,
+                "id": {
+                    "name": "rand_isaac",
+                    "disambiguator": [
+                        460286951455762825,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 24,
+                "id": {
+                    "name": "rand_core",
+                    "disambiguator": [
+                        13945836544175621099,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 25,
+                "id": {
+                    "name": "rand_chacha",
+                    "disambiguator": [
+                        6640682046920450591,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 26,
+                "id": {
+                    "name": "rand_hc",
+                    "disambiguator": [
+                        9062333158045358574,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 27,
+                "id": {
+                    "name": "rand_pcg",
+                    "disambiguator": [
+                        15558329599545980275,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 28,
+                "id": {
+                    "name": "rand_xorshift",
+                    "disambiguator": [
+                        12470319952299259650,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 29,
+                "id": {
+                    "name": "string_cache_codegen",
+                    "disambiguator": [
+                        16668614898660164023,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 30,
+                "id": {
+                    "name": "string_cache_shared",
+                    "disambiguator": [
+                        496382409951726022,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 31,
+                "id": {
+                    "name": "quote",
+                    "disambiguator": [
+                        7847904167891236725,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 32,
+                "id": {
+                    "name": "proc_macro",
+                    "disambiguator": [
+                        2520505651352641153,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 33,
+                "id": {
+                    "name": "proc_macro2",
+                    "disambiguator": [
+                        860214241399883719,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 34,
+                "id": {
+                    "name": "unicode_xid",
+                    "disambiguator": [
+                        10955306893923152161,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 35,
+                "id": {
+                    "name": "serde_derive",
+                    "disambiguator": [
+                        8431394130688776117,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 36,
+                "id": {
+                    "name": "serde_json",
+                    "disambiguator": [
+                        1767885811089625005,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 37,
+                "id": {
+                    "name": "serde",
+                    "disambiguator": [
+                        1294864452048921549,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 38,
+                "id": {
+                    "name": "itoa",
+                    "disambiguator": [
+                        1745848547741817249,
+                        0
+                    ]
+                }
+            },
+            {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "num": 39,
+                "id": {
+                    "name": "ryu",
+                    "disambiguator": [
+                        9293202346613576798,
+                        0
+                    ]
+                }
+            }
+        ],
+        "span": {
+            "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+            "byte_start": 436,
+            "byte_end": 5141,
+            "line_start": 10,
+            "line_end": 152,
+            "column_start": 1,
+            "column_end": 2
+        }
+    },
+    "imports": [],
+    "defs": [
+        {
+            "kind": "Mod",
+            "id": {
+                "krate": 0,
+                "index": 0
+            },
+            "span": {
+                "file_name": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+                "byte_start": 436,
+                "byte_end": 5141,
+                "line_start": 10,
+                "line_end": 152,
+                "column_start": 1,
+                "column_end": 2
+            },
+            "name": "",
+            "qualname": "::",
+            "value": "C:\\Users\\loicd\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\markup5ever-0.9.0\\build.rs",
+            "parent": null,
+            "children": [
+                {
+                    "krate": 0,
+                    "index": 1
+                },
+                {
+                    "krate": 0,
+                    "index": 2
+                },
+                {
+                    "krate": 0,
+                    "index": 3
+                },
+                {
+                    "krate": 0,
+                    "index": 4
+                },
+                {
+                    "krate": 0,
+                    "index": 5
+                },
+                {
+                    "krate": 0,
+                    "index": 6
+                },
+                {
+                    "krate": 0,
+                    "index": 7
+                },
+                {
+                    "krate": 0,
+                    "index": 10
+                },
+                {
+                    "krate": 0,
+                    "index": 11
+                },
+                {
+                    "krate": 0,
+                    "index": 13
+                },
+                {
+                    "krate": 0,
+                    "index": 16
+                },
+                {
+                    "krate": 0,
+                    "index": 17
+                },
+                {
+                    "krate": 0,
+                    "index": 20
+                },
+                {
+                    "krate": 0,
+                    "index": 23
+                },
+                {
+                    "krate": 0,
+                    "index": 26
+                },
+                {
+                    "krate": 0,
+                    "index": 29
+                },
+                {
+                    "krate": 0,
+                    "index": 32
+                },
+                {
+                    "krate": 0,
+                    "index": 33
+                },
+                {
+                    "krate": 0,
+                    "index": 36
+                }
+            ],
+            "decl_id": null,
+            "docs": "",
+            "sig": null,
+            "attributes": []
+        }
+    ],
+    "impls": [],
+    "refs": [],
+    "macro_refs": [],
+    "relations": []
+}

@@ -1,0 +1,13 @@
+e:\Etudes\DEVELOPPEMENT\_LAB\_RUST\web-scrapper\target\rls\debug\deps\tracing-188c964b6090ce91.rmeta: C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\lib.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\macros.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\dispatcher.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\field.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\instrument.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\level_filters.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\span.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\stdlib.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\subscriber.rs
+
+e:\Etudes\DEVELOPPEMENT\_LAB\_RUST\web-scrapper\target\rls\debug\deps\tracing-188c964b6090ce91.d: C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\lib.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\macros.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\dispatcher.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\field.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\instrument.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\level_filters.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\span.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\stdlib.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\subscriber.rs
+
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\lib.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\macros.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\dispatcher.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\field.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\instrument.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\level_filters.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\span.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\stdlib.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\tracing-0.1.29\src\subscriber.rs:

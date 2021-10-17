@@ -1,0 +1,15 @@
+e:\Etudes\DEVELOPPEMENT\_LAB\_RUST\web-scrapper\target\rls\debug\deps\markup5ever-ac5a252bc0c44bb9.rmeta: C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\lib.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\data\mod.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\interface\mod.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\interface\tree_builder.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\serialize.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\util\buffer_queue.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\util\smallcharset.rs e:\Etudes\DEVELOPPEMENT\_LAB\_RUST\web-scrapper\target\rls\debug\build\markup5ever-5d265241745428d0\out/generated.rs e:\Etudes\DEVELOPPEMENT\_LAB\_RUST\web-scrapper\target\rls\debug\build\markup5ever-5d265241745428d0\out/named_entities.rs
+
+e:\Etudes\DEVELOPPEMENT\_LAB\_RUST\web-scrapper\target\rls\debug\deps\markup5ever-ac5a252bc0c44bb9.d: C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\lib.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\data\mod.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\interface\mod.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\interface\tree_builder.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\serialize.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\util\buffer_queue.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\util\smallcharset.rs e:\Etudes\DEVELOPPEMENT\_LAB\_RUST\web-scrapper\target\rls\debug\build\markup5ever-5d265241745428d0\out/generated.rs e:\Etudes\DEVELOPPEMENT\_LAB\_RUST\web-scrapper\target\rls\debug\build\markup5ever-5d265241745428d0\out/named_entities.rs
+
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\lib.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\data\mod.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\interface\mod.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\interface\tree_builder.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\serialize.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\util\buffer_queue.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\markup5ever-0.10.1\util\smallcharset.rs:
+e:\Etudes\DEVELOPPEMENT\_LAB\_RUST\web-scrapper\target\rls\debug\build\markup5ever-5d265241745428d0\out/generated.rs:
+e:\Etudes\DEVELOPPEMENT\_LAB\_RUST\web-scrapper\target\rls\debug\build\markup5ever-5d265241745428d0\out/named_entities.rs:
+
+# env-dep:OUT_DIR=e:\\Etudes\\DEVELOPPEMENT\\_LAB\\_RUST\\web-scrapper\\target\\rls\\debug\\build\\markup5ever-5d265241745428d0\\out

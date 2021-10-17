@@ -1,0 +1,11 @@
+e:\Etudes\DEVELOPPEMENT\_LAB\_RUST\web-scrapper\target\rls\debug\deps\semver_parser-ba9213bbbd62b023.rmeta: C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\lib.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\version.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\range.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\common.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\recognize.rs
+
+e:\Etudes\DEVELOPPEMENT\_LAB\_RUST\web-scrapper\target\rls\debug\deps\libsemver_parser-ba9213bbbd62b023.rlib: C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\lib.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\version.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\range.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\common.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\recognize.rs
+
+e:\Etudes\DEVELOPPEMENT\_LAB\_RUST\web-scrapper\target\rls\debug\deps\semver_parser-ba9213bbbd62b023.d: C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\lib.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\version.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\range.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\common.rs C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\recognize.rs
+
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\lib.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\version.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\range.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\common.rs:
+C:\Users\loicd\.cargo\registry\src\github.com-1ecc6299db9ec823\semver-parser-0.7.0\src\recognize.rs:

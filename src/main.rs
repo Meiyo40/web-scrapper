@@ -1,17 +1,25 @@
-extern crate reqwest;
-extern crate scraper;
+//WHAT AM I DOING
+//FEATURES TO IMPLEMENT:
+//RETRIEVE SELECTED DATA FROM WEBSITE USING SCRAPER and REQWEST in async env.
+//Save desired data in a database and use it with a webapp (Symfony ?)
+//The Rust scraper must run and retrieve data every X minutes / hours
 
-use scraper::{Html, Selector};
+//DOC of libs
+//https://docs.rs/crate/scraper/0.12.0
+//https://docs.rs/crate/reqwest/0.11.5
+
 use std::collections::HashMap;
 
-mod website;
-
 #[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let resp = reqwest::get("https://www.rust-lang.org")
+async fn main() {
+    let html = get_website_html().await;
+    println!("{:?}", html);
+}
+
+async fn get_website_html() -> Result<(std::string::String), Box<dyn std::error::Error>> {
+    let html = reqwest::get("http://www.opex360.com/")
         .await?
-        .json::<HashMap<String, String>>()
+        .text()
         .await?;
-    println!("{:#?}", resp);
-    Ok(())
+    Ok(html)
 }

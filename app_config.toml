@@ -1,0 +1,7 @@
+[[website]]
+name = "website1"
+url = "http://www.website1.com/"
+
+[[website]]
+name = "website2"
+url = "http://www.website2.com"

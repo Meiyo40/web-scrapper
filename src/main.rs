@@ -15,13 +15,18 @@ mod website;
 
 #[tokio::main]
 async fn main() {
-    let html = get_website_html().await;
-    println!("{:?}", html);
+    website::configuration::set_configuration("app_config.toml");
+    //let html = get_website_html().await;
+    //println!("{:?}", html);
 }
 
 async fn get_website_html() -> Result<std::string::String, Box<dyn std::error::Error>> {
     let websites = website::list::WebsiteList::init();
     let url = websites.get_element(0); //DEV PURP, OPEX360
+
+    let article = &websites.articles.len();
+
+    println!("{}", article);
 
     let html = reqwest::get(url).await?.text().await?;
     Ok(html)

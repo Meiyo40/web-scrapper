@@ -7,3 +7,6 @@ The struct for each website will be:
 name = "google"
 url = "http://www.google.com"
 ```
+# PLAN FOR PROJECT
+
+![alt](https://i.ibb.co/6b3c6D2/Web-Scrapper-Def.png)

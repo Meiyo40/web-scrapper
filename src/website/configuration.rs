@@ -3,12 +3,13 @@ use std::env;
 use std::fs;
 use toml::Value;
 
-pub fn set_configuration(filename: &str) {
-    println!("seaching for: {}", &filename);
+///return the list of website to process
+pub fn set_configuration(filename: &str) -> Config {
+    println!("Getting configuration in: {}", &filename);
     let contents = fs::read_to_string(&filename).expect("Couldn't read configuration file");
-    println!("{:?}", &contents);
     let data: Config = toml::from_str(&contents).unwrap();
     print_data(&data);
+    data
 }
 
 fn print_data(data: &Config) {
@@ -20,12 +21,12 @@ fn print_data(data: &Config) {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-struct Config {
-    website: Vec<Site>,
+pub struct Config {
+    pub website: Vec<Site>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-struct Site {
-    name: String,
-    url: String,
+pub struct Site {
+    pub name: String,
+    pub url: String,
 }

@@ -1,5 +1,6 @@
 use super::article;
 use super::comment;
+use super::configuration;
 
 #[derive(Debug)]
 ///Store Website data, links and comments struct
@@ -19,14 +20,21 @@ impl WebsiteList {
     ///Return the List struct initialized with website list.
     pub fn init() -> WebsiteList {
         WebsiteList {
-            website_to_call: vec![String::from("http://www.opex360.com/")],
+            website_to_call: vec![],
             url_from_website: vec![],
             comments: vec![],
             articles: vec![],
         }
     }
 
-    #[allow(dead_code)]
+    pub fn set_configuration(&mut self, data: configuration::Config) {
+        for site in data.website {
+            self.add_website(site.url.clone());
+            println!("Added to list: {}", site.url);
+        }
+    }
+
+    //#[allow(dead_code)]
     ///Add the given webstring as a String in the website_to_call list
     pub fn add_website(&mut self, website: String) {
         self.website_to_call.push(website);

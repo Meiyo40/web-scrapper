@@ -15,13 +15,17 @@ mod website;
 
 #[tokio::main]
 async fn main() {
-    website::configuration::set_configuration("app_config.toml");
+    let data: website::configuration::Config =
+        website::configuration::set_configuration("app_config.toml");
+    let mut websites = website::list::WebsiteList::init();
+    websites.set_configuration(data);
     //let html = get_website_html().await;
     //println!("{:?}", html);
 }
 
-async fn get_website_html() -> Result<std::string::String, Box<dyn std::error::Error>> {
-    let websites = website::list::WebsiteList::init();
+async fn get_website_html(
+    websites: website::list::WebsiteList,
+) -> Result<std::string::String, Box<dyn std::error::Error>> {
     let url = websites.get_element(0); //DEV PURP, OPEX360
 
     let article = &websites.articles.len();

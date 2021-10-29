@@ -20,7 +20,7 @@ async fn main() {
 }
 
 async fn get_website_html() -> Result<std::string::String, Box<dyn std::error::Error>> {
-    let websites = website::List::WebsiteList::init();
+    let websites = website::list::WebsiteList::init();
     let url = websites.get_element(0); //DEV PURP, OPEX360
 
     let html = reqwest::get(url).await?.text().await?;

@@ -20,6 +20,7 @@ impl WebsiteList {
         }
     }
 
+    #[allow(dead_code)]
     pub fn add_website(&mut self, website: String) {
         self.website_to_call.push(website);
     }

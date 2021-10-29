@@ -7,8 +7,11 @@
 //DOC of libs
 //https://docs.rs/crate/scraper/0.12.0
 //https://docs.rs/crate/reqwest/0.11.5
+//https://github.com/utkarshkukreti/select.rs
 
-use std::collections::HashMap;
+//use std::collections::HashMap;
+
+mod website;
 
 #[tokio::main]
 async fn main() {
@@ -16,10 +19,10 @@ async fn main() {
     println!("{:?}", html);
 }
 
-async fn get_website_html() -> Result<(std::string::String), Box<dyn std::error::Error>> {
-    let html = reqwest::get("http://www.opex360.com/")
-        .await?
-        .text()
-        .await?;
+async fn get_website_html() -> Result<std::string::String, Box<dyn std::error::Error>> {
+    let websites = website::List::WebsiteList::init();
+    let url = websites.get_element(0); //DEV PURP, OPEX360
+
+    let html = reqwest::get(url).await?.text().await?;
     Ok(html)
 }

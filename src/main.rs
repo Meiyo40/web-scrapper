@@ -13,24 +13,23 @@
 
 mod website;
 
+use website::configuration as WebConfig;
+
 #[tokio::main]
 async fn main() {
-    let data: website::configuration::Config =
-        website::configuration::set_configuration("app_config.toml");
+    let data: WebConfig::Config = WebConfig::set_configuration("app_config.toml");
     let mut websites = website::list::WebsiteList::init();
     websites.set_configuration(data);
-    //let html = get_website_html().await;
-    //println!("{:?}", html);
+    let html = get_website_html(websites.get_element(0)).await;
+    println!("{:?}", html);
 }
 
-async fn get_website_html(
-    websites: website::list::WebsiteList,
-) -> Result<std::string::String, Box<dyn std::error::Error>> {
-    let url = websites.get_element(0); //DEV PURP, OPEX360
+async fn get_website_html(url: &String) -> Result<std::string::String, Box<dyn std::error::Error>> {
+    //let url = websites.get_element(0); //DEV PURP, OPEX360
 
-    let article = &websites.articles.len();
+    //let article = &websites.articles.len();
 
-    println!("{}", article);
+    //println!("{}", article);
 
     let html = reqwest::get(url).await?.text().await?;
     Ok(html)

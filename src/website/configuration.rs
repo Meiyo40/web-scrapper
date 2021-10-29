@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
-use std::env;
+//use std::env;
 use std::fs;
-use toml::Value;
+//use toml::Value;
 
 ///return the list of website to process
 pub fn set_configuration(filename: &str) -> Config {

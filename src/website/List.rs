@@ -2,12 +2,12 @@ use super::article::*;
 use super::comment::*;
 use super::configuration;
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 ///Store Website data, links and comments struct
 pub struct WebsiteList {
-    website_to_call: Vec<String>,  // will contain website to scrap
-    url_from_website: Vec<String>, //will contains url's captured from website (ex: the 11 article links from homepage of opex360)
-    pub comments: Vec<Comment>,    // will contain comments
+    pub website_to_call: Vec<String>,  // will contain website to scrap
+    pub url_from_website: Vec<String>, //will contains url's captured from website (ex: the 11 article links from homepage of opex360)
+    pub comments: Vec<Comment>,        // will contain comments
     pub articles: Vec<Article>,
 }
 
@@ -40,5 +40,9 @@ impl WebsiteList {
     ///Add the given webstring as a String in the website_to_call list
     pub fn add_website(&mut self, website: String) {
         self.website_to_call.push(website);
+    }
+
+    pub fn add_article(&mut self, article: Article) {
+        self.articles.push(article);
     }
 }

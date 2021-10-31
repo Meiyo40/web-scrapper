@@ -1,6 +1,5 @@
-use super::article::*;
-use super::comment::*;
 use super::configuration;
+use super::data::*;
 
 #[derive(Debug, Clone)]
 ///Store Website data, links and comments struct
@@ -12,7 +11,6 @@ pub struct WebsiteList {
 }
 
 impl WebsiteList {
-    #[allow(dead_code)]
     ///return the element at index X in the website_to_call attr
     pub fn get_element(&self, idx: usize) -> &String {
         &self.website_to_call[idx]
@@ -32,11 +30,10 @@ impl WebsiteList {
     pub fn set_configuration(&mut self, data: configuration::Config) {
         for site in data.website {
             self.add_website(site.url.clone());
-            println!("Added to list: {}", site.url);
+            println!("WEBSITE ADDED: {}", site.url);
         }
     }
 
-    //#[allow(dead_code)]
     ///Add the given webstring as a String in the website_to_call list
     pub fn add_website(&mut self, website: String) {
         self.website_to_call.push(website);

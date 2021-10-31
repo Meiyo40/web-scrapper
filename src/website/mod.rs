@@ -1,5 +1,4 @@
-pub mod article;
-pub mod comment;
 pub mod configuration;
+pub mod data;
 pub mod list;
-pub mod parser;
+pub mod website_getter;

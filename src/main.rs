@@ -15,13 +15,9 @@
 //use std::collections::HashMap;
 
 mod website;
-
-//use nos::Document;
-use select::document::Document;
-use select::predicate::{Attr, Class, Name, Predicate};
-use website::article::Article;
 use website::configuration as WebConfig;
 use website::list::WebsiteList;
+use website::website_getter;
 
 #[tokio::main]
 async fn main() {
@@ -30,8 +26,9 @@ async fn main() {
     websites.set_configuration(data);
     let url = websites.get_element(0);
     let website_list = websites.clone();
-    let websites = get_website_html(url, website_list).await;
+    let websites = website_getter::get_opex_website_article(url, website_list).await;
 
+    /*
     websites.ok().iter().for_each(|list| {
         list.articles.iter().for_each(|article| {
             println!("{:?}", article.get_title());
@@ -39,33 +36,7 @@ async fn main() {
         })
         //println!("{:?}", article);
     })
+    */
 
     //println!("{:?}", html);
-}
-
-async fn get_website_html(
-    url: &String,
-    mut website_controller: WebsiteList,
-) -> Result<WebsiteList, Box<dyn std::error::Error>> {
-    //let url = websites.get_element(0); //DEV PURP, OPEX360
-
-    //let article = &websites.articles.len();
-
-    let html = reqwest::get(url).await?.text().await?;
-
-    let document = Document::from(html.as_str());
-    //extract URL from homepage.
-    document.find(Class("post-title")).for_each(|title| {
-        title.find(Name("a")).for_each(|atag| {
-            let article_title = atag.text();
-            let article_url = String::from(atag.attr("href").unwrap());
-            let article = Article::new(article_title, article_url, 0);
-            website_controller.add_article(article);
-            println!("{:?}", atag.text());
-            println!("{:?}", atag.attr("href").unwrap());
-        });
-    });
-    //println!("{:?}", content);
-
-    Ok(website_controller)
 }

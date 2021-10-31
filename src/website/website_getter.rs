@@ -39,8 +39,36 @@ pub async fn get_opex_website_article(
         });
     });
     //println!("{:?}", content);
-
+    //let comments = get_opex_comments(&website_controller).await?;
+    //println!("COMMENTS === {:?}", comments);
     Ok(website_controller)
 }
 
-pub async fn get_opex_comments(mut websites_controller: &WebsiteList) {}
+pub async fn get_opex_comments(
+    mut websites_controller: &WebsiteList,
+) -> Result<String, Box<dyn std::error::Error>> {
+    let mut html = String::new();
+
+    for article in &websites_controller.articles {
+        let url = article.get_url();
+        let document = get_document(url).await?;
+
+        document.find(Class("comment")).for_each(|ol_comment| {
+            println!("{:?}", ol_comment);
+        })
+    }
+
+    /*
+
+    websites_controller.articles.iter().for_each(|article| {
+        let url = article.get_url();
+        let document = get_document(url).await?;
+
+        document
+            .find(Class("commentList"))
+            .for_each(|ol_comment| {})
+    });
+    */
+
+    Ok(html)
+}

@@ -15,6 +15,7 @@
 //use std::collections::HashMap;
 
 mod website;
+
 use website::configuration as WebConfig;
 use website::list::WebsiteList;
 use website::website_getter;
@@ -24,19 +25,6 @@ async fn main() {
     let data: WebConfig::Config = WebConfig::set_configuration("app_config.toml");
     let mut websites = WebsiteList::init();
     websites.set_configuration(data);
-    let url = websites.get_element(0);
-    let website_list = websites.clone();
-    let websites = website_getter::get_opex_website_article(url, website_list).await;
-
-    /*
-    websites.ok().iter().for_each(|list| {
-        list.articles.iter().for_each(|article| {
-            println!("{:?}", article.get_title());
-            println!("{:?}", article.get_url());
-        })
-        //println!("{:?}", article);
-    })
-    */
-
-    //println!("{:?}", html);
+    let url = websites.get_element(0); // DEV PURP, TODO IMPLEMENT LOOK IN THE SITE LIST
+    let websites = website_getter::get_opex_website_article(url, websites.clone(), false).await;
 }

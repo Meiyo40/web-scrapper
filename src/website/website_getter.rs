@@ -13,9 +13,11 @@ async fn get_document(url: &String) -> Result<Document, Box<dyn std::error::Erro
 }
 
 ///SPECIFIC GETTER FROM OPEX WEBSITE TO RETRIEVE ARTICLE LIST
+///3rd paramter is_debug_display display or not every title/url registred, in the console
 pub async fn get_opex_website_article(
     url: &String,
     mut website_controller: WebsiteList,
+    is_debug_display: bool,
 ) -> Result<WebsiteList, Box<dyn std::error::Error>> {
     //let url = websites.get_element(0); //DEV PURP, OPEX360
 
@@ -32,20 +34,24 @@ pub async fn get_opex_website_article(
             let article_title = atag.text();
             let article_url = String::from(atag.attr("href").unwrap());
             let article = Article::new(article_title, article_url, 0);
-            println!("TITLE: {:?}", article.get_title());
-            println!("URL: {:?}", article.get_url());
+
+            if is_debug_display {
+                println!("TITLE: {:?}", article.get_title());
+                println!("URL: {:?}", article.get_url());
+            }
 
             website_controller.add_article(article);
         });
     });
     //println!("{:?}", content);
-    //let comments = get_opex_comments(&website_controller).await?;
+    //let comments = get_opex_comments(&website_controller, true).await?;
     //println!("COMMENTS === {:?}", comments);
     Ok(website_controller)
 }
 
 pub async fn get_opex_comments(
     mut websites_controller: &WebsiteList,
+    is_debug_display: bool,
 ) -> Result<String, Box<dyn std::error::Error>> {
     let mut html = String::new();
 
@@ -54,7 +60,9 @@ pub async fn get_opex_comments(
         let document = get_document(url).await?;
 
         document.find(Class("comment")).for_each(|ol_comment| {
-            println!("{:?}", ol_comment);
+            if is_debug_display {
+                println!("{:?}", ol_comment);
+            }
         })
     }
 

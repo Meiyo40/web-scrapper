@@ -26,5 +26,5 @@ async fn main() {
     let mut websites = WebsiteList::init();
     websites.set_configuration(data);
     let url = websites.get_element(0); // DEV PURP, TODO IMPLEMENT LOOK IN THE SITE LIST
-    let websites = website_getter::get_opex_website_article(url, websites.clone(), false).await;
+    let _websites = website_getter::get_opex_website_article(url, websites.clone(), false).await;
 }

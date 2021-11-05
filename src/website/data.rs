@@ -26,7 +26,7 @@ impl Article {
 
 #[derive(Debug, Clone)]
 pub struct Comment {
-    id: u32,
+    pub id: u32,
     pub author: String,
     pub content: String,
     pub date: String,

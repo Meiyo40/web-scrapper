@@ -43,8 +43,8 @@ pub async fn get_opex_website_article(
             website_controller.add_article(article);
         });
     });
-    //println!("{:?}", content);
-    //let comments = get_opex_comments(&website_controller, true).await?;
+
+    let comments = get_opex_comments(&website_controller, false).await?;
     //println!("COMMENTS === {:?}", comments);
     Ok(website_controller)
 }
@@ -55,16 +55,60 @@ pub async fn get_opex_comments(
 ) -> Result<String, Box<dyn std::error::Error>> {
     let mut html = String::new();
 
+    let mut comment_id: u32 = 0;
+    let mut Comments: Vec<Comment> = vec![];
+
     for article in &websites_controller.articles {
         let url = article.get_url();
         let document = get_document(url).await?;
 
-        document.find(Class("comment")).for_each(|ol_comment| {
+        document.find(Class("comment")).for_each(|comment| {
+            comment.find(Class("comment-body")).for_each(|body| {
+                let mut comment_data: Comment = Comment {
+                    id: 0,
+                    author: String::from("NA"),
+                    content: String::from("NA"),
+                    date: String::from("NA"),
+                    children: vec![],
+                };
+                comment_data.id = comment_id;
+                /*
+                let mut comment_author = String::new();
+                let mut comment_content = String::new();
+                let mut comment_date = String::new();
+                */
+
+                body.find(Class("comment-author")).for_each(|author| {
+                    author.find(Name("cite")).for_each(|author_name| {
+                        comment_data.author = author_name.text();
+                    })
+                });
+
+                body.find(Class("commentmetadata"))
+                    .for_each(|comment_metadata| {
+                        comment_metadata.find(Name("a")).for_each(|date| {
+                            comment_data.date = date.text();
+                        })
+                    });
+
+                body.find(Name("p")).for_each(|content| {
+                    //COMMENT CONTENT
+                    comment_data.content = content.text();
+                    //println!("COMMENT CONTENT :: {:?}", content.text());
+                });
+
+                Comments.push(comment_data);
+                comment_id = comment_id + 1; //DEV PURP NO REAL ID
+            });
             if is_debug_display {
-                println!("{:?}", ol_comment);
+                println!("{:?}", comment);
             }
-        })
+        });
     }
+
+    Comments.iter().for_each(|comment| {
+        println!("COMMENT DATA :: {:?}", comment);
+    });
 
     /*
 

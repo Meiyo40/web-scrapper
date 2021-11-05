@@ -20,6 +20,9 @@ url = "http://www.google.com"
 [[user_to_search]]
 username = "bob"
 last_update = 0
+
+[setup_options]
+is_debug_mode = false
 ```
 
 The field last_update will store the timestamp of every update and avoid too much request (Not sure if the system will keep this)

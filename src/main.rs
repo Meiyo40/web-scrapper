@@ -22,9 +22,14 @@ use website::website_getter;
 
 #[tokio::main]
 async fn main() {
-    let data: WebConfig::Config = WebConfig::set_configuration("app_config.toml");
+    let configuration: WebConfig::Config = WebConfig::set_configuration("app_config.toml");
     let mut websites = WebsiteList::init();
-    websites.set_configuration(data);
+    websites.set_configuration(&configuration);
     let url = websites.get_element(0); // DEV PURP, TODO IMPLEMENT LOOK IN THE SITE LIST
-    let _websites = website_getter::get_opex_website_article(url, websites.clone(), false).await;
+    let _websites = website_getter::get_opex_website_article(
+        url,
+        websites.clone(),
+        &configuration.setup_options.is_debug_mode,
+    )
+    .await;
 }

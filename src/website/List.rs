@@ -27,8 +27,8 @@ impl WebsiteList {
     }
 
     ///Prepare the WebsiteList struct with data from the app_config file
-    pub fn set_configuration(&mut self, data: configuration::Config) {
-        for site in data.website {
+    pub fn set_configuration(&mut self, configuration: &configuration::Config) {
+        for site in &configuration.website {
             self.add_website(site.url.clone());
             println!("WEBSITE ADDED: {}", site.url);
         }

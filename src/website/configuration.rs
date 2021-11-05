@@ -14,21 +14,28 @@ pub fn set_configuration(filename: &str) -> Config {
 }
 
 fn print_data(data: &Config) {
-    println!("######################LOADED WEBSITES!######################");
+    println!("##################### LOADED WEBSITES #####################");
     for website in &data.website {
         println!("{:?}", website);
     }
-    println!("###################### LOADED USERS ! ######################");
+    println!("###################### LOADED USERS ######################");
     for user in &data.user_to_search {
         println!("{:?}", user);
     }
-    println!("############################################################")
+    println!("###################### SETTINGS #######################");
+    println!("{:?}", data.setup_options);
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Config {
     pub website: Vec<Site>,
     pub user_to_search: Vec<User>,
+    pub setup_options: SetupOptions,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct SetupOptions {
+    pub is_debug_mode: bool,
 }
 
 #[derive(Serialize, Deserialize, Debug)]

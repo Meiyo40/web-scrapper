@@ -18,7 +18,7 @@ async fn get_document(url: &String) -> Result<Document, Box<dyn std::error::Erro
 pub async fn get_opex_website_article(
     url: &String,
     mut website_controller: WebsiteList,
-    is_debug_display: bool,
+    is_debug_display: &bool,
 ) -> Result<WebsiteList, Box<dyn std::error::Error>> {
     //let url = websites.get_element(0); //DEV PURP, OPEX360
 
@@ -36,7 +36,7 @@ pub async fn get_opex_website_article(
             let article_url = String::from(atag.attr("href").unwrap());
             let article = Article::new(article_title, article_url, 0);
 
-            if is_debug_display {
+            if *is_debug_display {
                 println!("TITLE: {:?}", article.get_title());
                 println!("URL: {:?}", article.get_url());
             }
@@ -45,14 +45,14 @@ pub async fn get_opex_website_article(
         });
     });
 
-    let _comments = get_opex_comments(&website_controller, true).await?;
+    let _comments = get_opex_comments(&website_controller, is_debug_display).await?;
     //println!("COMMENTS === {:?}", comments);
     Ok(website_controller)
 }
 
 pub async fn get_opex_comments(
     websites_controller: &WebsiteList,
-    is_debug_display: bool,
+    is_debug_display: &bool,
 ) -> Result<Vec<Comment>, Box<dyn std::error::Error>> {
     let mut comment_list: Vec<Comment> = vec![];
 
@@ -66,7 +66,7 @@ pub async fn get_opex_comments(
         });
     }
 
-    if is_debug_display {
+    if *is_debug_display {
         comment_list.iter().for_each(|comment| {
             println!("###COMMENT DATA###");
             println!(
@@ -113,12 +113,6 @@ fn _get_comment(node: &Node) -> Result<Comment, Box<dyn std::error::Error>> {
     });
 
     node.find(Class("comment-body")).for_each(|body| {
-        /*
-        let mut comment_author = String::new();
-        let mut comment_content = String::new();
-        let mut comment_date = String::new();
-        */
-
         //RETRIEVE COMMENT AUTHOR FROM HTML
         body.find(Class("comment-author")).for_each(|author| {
             author.find(Name("cite")).for_each(|author_name| {

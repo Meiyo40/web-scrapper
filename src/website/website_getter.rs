@@ -2,6 +2,8 @@ use super::data::*;
 use super::list::WebsiteList;
 use select::document::Document;
 use select::node::Node;
+
+#[allow(unused_imports)]
 use select::predicate::{Attr, Class, Name, Predicate};
 
 ///Retrieve HTML DOC from given URL
@@ -14,20 +16,11 @@ async fn get_document(url: &String) -> Result<Document, Box<dyn std::error::Erro
 }
 
 ///SPECIFIC GETTER FROM OPEX WEBSITE TO RETRIEVE ARTICLE LIST
-///3rd paramter is_debug_display display or not every title/url registred, in the console
 pub async fn get_opex_website_article(
     url: &String,
     mut website_controller: WebsiteList,
     is_debug_display: &bool,
 ) -> Result<WebsiteList, Box<dyn std::error::Error>> {
-    //let url = websites.get_element(0); //DEV PURP, OPEX360
-
-    //let article = &websites.articles.len();
-
-    //let html = reqwest::get(url).await?.text().await?;
-
-    //let document = Document::from(html.as_str());
-
     let document = get_document(&url).await?;
     //extract URL from homepage.
     document.find(Class("post-title")).for_each(|title| {
@@ -46,10 +39,11 @@ pub async fn get_opex_website_article(
     });
 
     let _comments = get_opex_comments(&website_controller, is_debug_display).await?;
-    //println!("COMMENTS === {:?}", comments);
+
     Ok(website_controller)
 }
 
+///RETRIEVE ALL COMMENTS OF OPEX360 (FROM THE 11 ARTICLE OF HOMEPAGE)
 pub async fn get_opex_comments(
     websites_controller: &WebsiteList,
     is_debug_display: &bool,
@@ -61,7 +55,7 @@ pub async fn get_opex_comments(
         let document = get_document(url).await?;
 
         document.find(Name("ol")).for_each(|li_1| {
-            let comment = _get_comment(&li_1).unwrap();
+            let comment = get_comment(&li_1).unwrap();
             comment_list.push(comment);
         });
     }
@@ -70,35 +64,24 @@ pub async fn get_opex_comments(
         comment_list.iter().for_each(|comment| {
             println!("###COMMENT DATA###");
             println!(
-                "AUTHOR: {}, DATE: {}, CONTENT:\n {:?}",
-                comment.author, comment.date, comment.content
+                "ID: {}, AUTHOR: {}, DATE: {}, CONTENT:\n {:?}",
+                comment.id, comment.author, comment.date, comment.content
             );
             println!("###CHILDREN###");
             comment.children.iter().for_each(|child| {
                 println!(
-                    "AUTHOR: {}, DATE: {}, CONTENT:\n {:?}",
-                    child.author, child.date, child.content
+                    "ID: {}, AUTHOR: {}, DATE: {}, CONTENT:\n {:?}",
+                    child.id, child.author, child.date, child.content
                 );
             });
         });
     }
 
-    /*
-
-    websites_controller.articles.iter().for_each(|article| {
-        let url = article.get_url();
-        let document = get_document(url).await?;
-
-        document
-            .find(Class("commentList"))
-            .for_each(|ol_comment| {})
-    });
-    */
-
     Ok(comment_list)
 }
 
-fn _get_comment(node: &Node) -> Result<Comment, Box<dyn std::error::Error>> {
+///GET GET COMMENTS AND THEIR CHILDRENS FROM GIVEN DIV, SET FOR opex360
+fn get_comment(node: &Node) -> Result<Comment, Box<dyn std::error::Error>> {
     let mut comment = Comment {
         id: 0,
         author: String::from("NA"),
@@ -107,12 +90,18 @@ fn _get_comment(node: &Node) -> Result<Comment, Box<dyn std::error::Error>> {
         children: vec![],
     };
 
+    //GET CHILDREN ELEMENTS FROM COMMENT IF EXIST
     node.find(Class("children")).for_each(|children_list| {
-        let l = _get_comment(&children_list).unwrap();
+        let l = get_comment(&children_list).unwrap();
         comment.children.push(l);
     });
 
     node.find(Class("comment-body")).for_each(|body| {
+        let id: Vec<&str> = body.attr("id").unwrap().split("div-comment-").collect();
+        let id = id.get(1).unwrap().parse::<u32>().unwrap();
+
+        comment.id = id;
+
         //RETRIEVE COMMENT AUTHOR FROM HTML
         body.find(Class("comment-author")).for_each(|author| {
             author.find(Name("cite")).for_each(|author_name| {

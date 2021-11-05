@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 //use std::env;
 use std::fs;
-use std::time::{Duration, SystemTime};
+use std::time::SystemTime;
 //use toml::Value;
 
 ///return the list of website to process
@@ -51,6 +51,7 @@ pub struct User {
 }
 
 impl User {
+    #[allow(dead_code)]
     ///Update the last_update prop as the system timestamp of now() in seconds.
     pub fn set_last_update(&mut self) -> &User {
         let now = match SystemTime::now().duration_since(SystemTime::UNIX_EPOCH) {
